@@ -10,7 +10,7 @@ jobs:
       matrix:
         python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
 
-  setup:
+ setup:
      name="eth-cobra",
      version='0.1.0',
      version='0.1.1',
