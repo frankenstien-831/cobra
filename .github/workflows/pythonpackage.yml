@@ -1,0 +1,34 @@
+from setuptools import setup, find_packages
+with open("README.md", "r") as _readme:
+    long_description = _readme.read()
+with open("requirements.txt", "r") as _requirements:
+    requirements = list(map(str.strip, _requirements.read().split("\n")))[:-1]
+
+ setup(
+     name="eth-cobra",
+     version='0.1.0',
+     version='0.1.1',
+     description='A fast, flexible and simple development environment framework for Ethereum smart contract, '
+                 'testing and deployment on Ethereum virtual machine(EVM). https://cobraframework.github.io',
+     long_description=long_description,
+    long_description_content_type="text/markdown",
+    license='MIT',
+    author='frankenstein',
+    author_email='louisleelive@icloud.com',
+    url='https://github.com/frankenstien-831/cobraframework/cobra',
+    install_requires=requirements,
+    keywords=['cobra'],
+    entry_points={
+        'console_scripts': ["cobra=cobra.cli.__main__:main"]
+    },
+    python_requires=">=3.6,<4",
+    packages=find_packages(),
+    include_package_data=True,
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Build Tools",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7"
